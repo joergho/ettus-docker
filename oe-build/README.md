@@ -9,9 +9,10 @@ To build this container from source, navigate to this directory and run:
 ## Building an SD card image using the Docker container
 
 Navigate to a location with sufficient disk space. There, create a new directory
-called `oe-builder` and make it writable by everyone:
+called `oe-builder`, and make it writable by everyone. Also copy the default
+user files like .bashrc:
 
-   $ mkdir oe-builder && chmod 777 oe-builder
+   $ mkdir oe-builder && chmod 777 oe-builder && cp -r /etc/skel/. oe-builder
 
 Then run the Docker container:
 
